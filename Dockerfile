@@ -7,7 +7,7 @@ LABEL maintainer="Jody Boucher"
 # Install Ansible
 # Clean up
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends software-properties-common cron && \
+    apt-get install -y --no-install-recommends software-properties-common python3-minimal systemd cron && \
     add-apt-repository -y ppa:ansible/ansible && \
     apt-get update && \
     apt-get install -y --no-install-recommends ansible && \
